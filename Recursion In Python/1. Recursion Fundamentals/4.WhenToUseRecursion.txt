@@ -1,0 +1,30 @@
+WHEN TO USE RECURSION?
+Note: Recursion is not always the best method for solving a problem, even if it is
+possible to do so.
+> Recursion is useful for problems that are difficult to solve when using the iterative
+solution.
+> The most obvious indication that you should use recursion is when that problem can be
+broken down into smaller sub-problems. It is likely that a problem can be solved using
+recursion when you observe a pattern of that problem breaking down into similar
+sub-problems.
+> To solve some problems, you might have to nest an arbitrary number of loops. However,
+since we do not know the number of loops, the solution will get complicated. Such
+problems can be more easily solved using recursion.
+                                If you know the number of loops that need to be nested
+use the iterative approach. If you do not know the number of loops that need to nested,
+use the recursive method.
+
+------------- Example ------------------------
+def printPattern(targetNumber):
+    if targetNumber <= 0:
+        print(targetNumber,end=" ")
+        return
+
+    print(targetNumber,end=" ")
+    printPattern(targetNumber - 5)
+    print(targetNumber,end=" ")
+
+printPattern(10)
+
+---> 10 5 0 5 10
+

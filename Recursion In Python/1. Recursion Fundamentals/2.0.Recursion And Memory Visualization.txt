@@ -1,0 +1,17 @@
+MEMORY ALLOCATION IN RECURSION
+> When a function is called, its memory is allocated on a stack. Stacks in computing
+architectures are the regions of memory where data is added or removed in a last-in-first out
+(LIFO) process. Each program has a reserved region of memory referred to as its stack.
+When a function executes, it adds its state data to the top of the stack. When the
+function exits, this data is removed from stack.
+
+MEMORY ALLOCATION OF RECURSIVE FUNCTIONS
+> A recursive function calls itself, so the memory for a called function is allocated
+on top of the memory allocated for calling the function.
+
+Note: A different copy of local variables is created for each function call. When the
+base case is reached, the function returns its value to the function that it was
+called from, and its memory is de-allocated. This process continues until the parent
+function is returned.
+
+

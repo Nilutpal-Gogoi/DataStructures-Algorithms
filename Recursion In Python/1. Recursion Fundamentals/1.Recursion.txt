@@ -1,0 +1,29 @@
+WHAT IS RECURSION?
+> Recursion occurs when a function calls itself repeatedly until it reaches a specified
+stopping condition. Such a function is called a recursive function.
+
+WHY USE RECURSION?
+> Recursive code is generally shorter and easier to write than an iterative code. In
+general, loops are also converted into recursive functions when they are compiled or
+interpreted.
+>Recursion is most useful for tasks that can be defined in terms of similar sub-tasks.
+
+FORMAT OF A RECURSIVE FUNCTION
+A recursive function consists of 2 main parts:
+    1. Base Case: The base case is where all further calls to the same function stop,
+meaning that it does not make any subsequent recursive calls.
+    2. Recursive Case: The recursive case is where the function calls itself repeatedly
+until it reaches the base case.
+
+> In a recursive function, the solution to the main problem is expressed in terms of
+smaller problems until the smallest problem reaches the base case.
+
+SYNTAX OF A RECURSIVE FUNCTION
+def RecursiveFunction():
+    # Base Case
+    if <baseCaseCondition>:
+        <return some base case value>
+
+    # Recursive Case
+    else:
+        <return(recursive call and any other task)>

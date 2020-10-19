@@ -1,0 +1,49 @@
+WHAT IS ITERATION?
+Iteration means repeating some steps to achieve the desired outcome. In computer programming,
+iteration process usually involve a mechanism, including loops.
+
+Format of an Iterative Function
+> Each iteration function consists of a loop and a conditional statement that determines
+  whether to continue iteration or to stop further execution.
+
+Syntax of an Iterative Function
+def IterativeFunction():
+    <some local variables if required>
+    while <someCondition == TRUE> :
+        # Perform a task
+
+DIFFERENCES BETWEEN ITERATIVE AND RECURSIVE FUNCTIONS
+Both recursion and iteration are used for executing some instructions repeatedly until
+some condition is satisfied.
+
+1.Definition
+> Recursion refers to a situation where a function calls itself repeatedly until a base
+  condition is satisfied, at which point further recursive calls stop.
+> Iteration refers to a situation where some statements are executed again and again
+  using loops until some condition is satisfied.
+
+2.Application
+> Recursion is a process because it is always called on a function.
+> Iterative code is applied to variables. It is a set of instructions that are called upon repeatedly.
+
+3.Program Termination
+> Recursive code terminates when the base condition is satisfied.
+> Iterative code either runs for a particular number of loops or until a specified condition is met.
+
+4.Code Size
+> Recursive code is smaller in length and neater.
+> Iterative code is usually extensive and cluttered
+
+5.Overhead Time
+> Recursive code has an overhead time for each recursive call that it makes.
+> Iterative code has no overhead time.
+
+6.Speed
+> Recursive code is slower than iterative code, since it not only runs the program but
+  must also invoke stack memory.
+> Iterative code has a relatively faster runtime speed.
+
+7.Stack Utilization
+> Recursion uses a stack to store the variable changes and parameters for each recursive call.
+> Iterative code does not use a stack.
+

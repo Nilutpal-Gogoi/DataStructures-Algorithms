@@ -1,0 +1,11 @@
+STEPS FOR CONVERTING ITERATIVE CODE TO RECURSIVE
+1. Identify the main loop.
+   > This loop should modify one or more variables.
+   > It should return a result based on its final values.
+2. Use the loop condition as the "base case" and the body of the loop as the recursive case.
+3. The local variables in the iterative version turn into the parameters of the recursive
+   version.
+4. Compile and rerun tests.
+5. Refactor the new function: You may be able to remove some temps and find a better structure
+   for the conditional in the recursive function.
+   
