@@ -77,7 +77,87 @@ class LinkedList:
         cursor = self.head
         while count < prev_node:
             cursor = cursor.next
-            print(cursor.data)
+            # print(cursor.data)
+            cursor += 1
+        newNode.next = cursor.next
+        cursor.next = newNode
+
+    # ------------------------------------ 3. DELETION OF LINKED LIST -----------------------------------------
+    # 3.1 DELETION BY VALUE
+    def deletingByValue(self, data):
+        # 3.1.1 Node to be deleted is head
+        cursor = self.head
+        if cursor and cursor.data == data:
+            self.head = cursor.next
+            cursor.next = None
+            return
+
+        # 3.1.2 Node to be deleted is other than the head
+        prev = None
+        while cursor and cursor.data != data:
+            prev = cursor
+            cursor = cursor.next
+        if cursor is None:
+            return
+        prev.next = cursor.next
+        cursor.next = None
+        return
+
+    # 3.2 DELETION WITH POSITION
+    def deletingByPosition(self, pos):
+        if self.head:
+            cursor = self.head
+        # 3.2.1 Node to be deleted is at position 0
+            if pos == 0:
+                self.head = cursor.next
+                cursor = None
+                return
+        # 3.2.2 Node to be deleted at some other position
+            prev = None
+            count = 0
+            while cursor and count != pos:
+                prev = cursor
+                cursor = cursor.next
+                count += 1
+            if cursor is None:
+                return
+            prev.next = cursor.next
+            cursor = None
+
+    # ------------------------------------ 4. LENGTH OF LINKED LIST -----------------------------------------
+    # 4.1 Iterative Method
+    def length_iterative(self):
+        count = 0
+        cursor = self.head
+        while cursor:
+            cursor = cursor.next
+            count += 1
+        return count
+
+    # 4.2 Recursive Method
+    def length_recursive(self,node):
+        if node is None:
+            return 0
+        return 1 + self.length_recursive(node.next)
+
+    # ------------------------------------ 5. NODE SWAP IN LINKED LIST -----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
