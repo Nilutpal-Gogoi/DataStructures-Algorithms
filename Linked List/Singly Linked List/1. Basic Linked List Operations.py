@@ -77,7 +77,6 @@ class LinkedList:
         cursor = self.head
         while count < prev_node:
             cursor = cursor.next
-<<<<<<< HEAD
             # print(cursor.data)
             cursor += 1
         newNode.next = cursor.next
@@ -158,10 +157,6 @@ class LinkedList:
 
 
 
-
-=======
-            print(cursor.data)
->>>>>>> 984311bfccf1a7a423e0b0bf2d0b948f644c91f9
 
 
 
