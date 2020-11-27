@@ -52,7 +52,6 @@ def BinarySearchRecursive(arr, value, low, high):
 
 
 # Time complexity : O(logn) , Space Complexity: O(1) [for iterative], O(logn) [for recursive]
-
 # ---------------------------------------------------------------------------------------------------------
 # QUESTION 1: Given an array of n numbers, give an algorithm for checking whether there are any
 # duplicate elements in the array?
@@ -208,7 +207,6 @@ def firstRepeatedHash(arr):  # T.C : O(n) , S.C: O(n)
 
 
 # print(firstRepeatedHash([3,2,1,1,2,1,2,5,5]))
-
 # ---------------------------------------------------------------------------------------------------------------------
 # QUESTION 4: FIND THE MISSING NUMBER: We are given a list of n-1 integers and these integers are in the range of 1 to n.
 # There are no duplicates in the list. One of the integers is missing in the list. Given an algorithm to find the missing
@@ -692,4 +690,9 @@ def searchCeil(arr, k):                                       # T.C : O(logn), S
             low = mid + 1
     return result, arr[result]
 
-# print(searchCeil([1,2,3,4,8,10,10,12,19],9))
+# print(searchCeil([1,2,3,4,8,10,12,19],9))
+# ----------------------------------------------------------------------------------------------------------------------
+# Question 20: Finding the Next Alphabetical Element in a sorted array.
+
+# def nextAlphabeticalElement(arr, key):
+
