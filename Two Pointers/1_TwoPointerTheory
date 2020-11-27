@@ -1,0 +1,14 @@
+> Whenever the array or LinkedList is sorted then think of two pointer, it will give the solution in O(n) complexity.
+> Sometimes when we have to deal with Sorted Arrays(or LinkedLists) and need to find a set of elements that fulfill certain
+constraints, the Two Pointer approach becomes quite useful.
+
+example question: Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to
+                  the given target.
+
+solution: Brute force approach will be using two loops - Time Complexity: O(n2) and Space Complexity: O(1).
+        > Better approach will be by using two pointer. One pointer at the start of the array(left pointer) and other
+          at the end(right pointer).
+            1. We will check the sum of both the numbers pointed by the pointer.
+            2. If sum is less than the required sum then we will increase the left pointer.
+            3. If sum is more than the required sum then we will decrease the right pointer.
+         Time Complexity: O(n) and Space Complexity: O(1)
