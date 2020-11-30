@@ -11,7 +11,7 @@ def make_squares(arr):
 
 # The better approach will be by finding the first non-negative number then using two pointers to insert the squares of
 # the numbers in an array
-# Time Complexity: O(n) and Space Complexity: O(1)
+# Time Complexity: O(n) and Space Complexity: O(N) {Space of the output array}
 
 
 def make_squares1(arr):
@@ -44,7 +44,7 @@ def make_squares1(arr):
 
 # We can also use another approach with two pointers. Here we can use two pointer from both the ends and check the
 # larger one. If one is larger then it is inserted to the result array
-# Time Complexity: O(n) and Space Complexity: O(1)
+# Time Complexity: O(n) and O(N) {Space of the output array}
 
 
 def make_squares2(arr):
