@@ -1,0 +1,51 @@
+> Tree traversal is process of visiting(checking or updating) each node in a tree data structure, exactly once.
+> They may be traversed in depth-first or breadth-first order.
+> There are three common ways to traverse a tree in depth-first order:
+    1. In-order
+    2. Pre-order
+    3. Post-order
+
+> PRE-ORDER Traversal:
+   Algorithm for pre-order traversal:
+   1. Check if the current node is empty/null.
+   2. Display the data part of the root (or current node).
+   3. Traverse the left subtree by recursively calling the pre-order method.
+   4. Traverse the right subtree by recursively calling the pre-order method.
+
+    def preorder_print(self, start, traversal):
+        "Root => Left => Right"
+        if start:
+            traversal += (str(start.value) + "-")
+            traversal = self.preorder_print(start.left, traversal)
+            traversal = self.preorder_print(start.right, traversal)
+        return traversal
+
+> IN-ORDER Traversal :
+   Algorithm for in-order traversal:
+   1. Check if the current node is empty/null.
+   2. Traverse the left subtree by recursively calling the in-order method.
+   3. Display the data part of the root (or current node).
+   4. Traverse the right subtree by recursively calling the in-order method.
+
+    def inorder_print(self, start, traversal):
+        "Left => Root => Right"
+        if start:
+            traversal = self.inorder_print(start.left, traversal)
+            traversal += (str(start.value) + "-")
+            traversal = self.inorder_print(start.right, traversal)
+        return traversal
+
+> POST-ORDER Traversal :
+   Algorithm for post-order traversal:
+   1. Check if the current node is empty/null.
+   2. Traverse the left subtree by recursively calling the in-order method.
+   3. Traverse the right subtree by recursively calling the in-order method.
+   4. Display the data part of the root (or current node).
+
+    def postorder_print(self, start, traversal):
+        "Left => Root => Right"
+        if start:
+            traversal = self.postorder_print(start.left, traversal)
+            traversal = self.postorder_print(start.right, traversal)
+            traversal += (str(start.value) + "-")
+        return traversal
