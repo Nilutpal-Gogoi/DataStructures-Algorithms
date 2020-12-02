@@ -1,0 +1,48 @@
+> Trees consist of vertices(nodes) and edges that connect them.
+> Unlike linear data structure, trees are hierarchical. They are similar to graphs, except that a cycle cannot exist in
+  a Tree - they are acyclic. (There is always exactly one path between any two nodes)
+
+> Terms :-
+  1) Root Node:
+    A node with no parent nodes.
+  2) Child Node:
+    A node which is linked to an upper node. (Parent Node)
+  3) Parent Node:
+    A node that has links to one or more Child Nodes.
+  4) Sibling Node:
+    Nodes that share same Parent Node.
+  5) Leaf Node:
+    A node that doesn't have any Child Node.
+  6) Ancestor Node:
+    The nodes on the path from a node d to the root node. Ancestor nodes include node d's parents,
+  grandparents, and so on
+  7) Sub-tree:
+    For a particular non-leaf node, a collection of nodes, essentially the tree, starting from its child node.
+  The tree formed by a node and its descendants.
+  8) Degree of a node:
+    Total number of children of a node.
+  9) Length of a path:
+    The number of edges in a path.
+  10) Depth of a node n:
+    The length of the path from a node n to the root node. The depth of the root node is 0.
+  11) Level of a node n: (Depth of a node)+1
+  12) Height of a node n:
+    The length of the path from n to its deepest descendant. So the height of the tree itself is
+  the height of the root node and the height of leaf nodes is always 0.
+  13)Height of a Tree:
+    Height of its root node.
+
+> Tree Types -
+    Different type of trees exists which offers its own particular structure and hence space-time complexity for
+   different operations.
+   1) Binary Trees
+   2) Binary Search Trees
+   3) AVL Trees
+   4) Red-Black Trees
+   5) 2-3 Trees
+
+> Balanced Binary Tree -
+    A binary tree is height-balanced if, for each node in the tree, the difference between the height of the right
+   subtree and the left subtree is at most one.
+         |Height(LeftSubTree) - Height(RightSubTree)| <= 1
+
