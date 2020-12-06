@@ -1,0 +1,17 @@
+> A singly Linked List in its simplest form is a collection of nodes that collectively form a linear sequence.
+> It is a linear data structure.
+> Each node stores an reference to an object that is an element of the sequence, as well as a reference to the next node
+  of the list.
+> Properties:-
+    a) Successive elements are connected by pointers.
+    b) Last element points to null.
+    c) Can grow or shrink in size during execution of a program.
+    d) Can be made just as long as reqd. (until system memory exhausts)
+    e) It doesn't waste memory space( but takes some extra memory for pointers).
+> PROS :-
+    a) They have const time insertions and deletions in any position whereas arrays req O(n) time to do the same.
+    b) They can continue to expand without having to specify their size ahead of time.
+> CONS :-
+    a) To access element in a linked list, you need to take O(k) time to go from the head to the kth element whereas
+arrays have const time to access elements in an array.
+    b) Extra memory space for a pointer is reqd with each element of linked list.

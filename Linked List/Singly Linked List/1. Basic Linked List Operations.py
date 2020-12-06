@@ -47,7 +47,7 @@ class LinkedList:
             self.traverse_recursive(node.next)
 
     # Here if we interchange the line 40 and line 41 then it will print the reverse of the linked list. So we can
-    # it as a procedure for printing the linked list in reverse order.
+    # use it as a procedure for printing the linked list in reverse order.
 
     # ------------------------------------ 2. INSERTION OF LINKED LIST -----------------------------------------
     # 2.1 INSERTING AT HEAD (Prepend)
@@ -114,7 +114,7 @@ class LinkedList:
         # 3.2.1 Node to be deleted is at position 0
             if pos == 0:
                 self.head = cursor.next
-                cursor = None
+                cursor.next = None
                 return
         # 3.2.2 Node to be deleted at some other position
             prev = None
@@ -127,6 +127,7 @@ class LinkedList:
                 return
             prev.next = cursor.next
             cursor = None
+            return
 
     # ------------------------------------ 4. LENGTH OF LINKED LIST -----------------------------------------
     # 4.1 Iterative Method
@@ -163,7 +164,7 @@ class LinkedList:
             prev2 = cursor2
             cursor2 = cursor2.next
 
-        if not cursor1 and not cursor2:
+        if not cursor1 or not cursor2:
             return
 
         # There are two corner cases that we have to keep in mind:
