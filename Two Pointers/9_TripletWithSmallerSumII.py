@@ -14,8 +14,6 @@
 #    [-1, 1, 4], [-1, 1, 3], [-1, 1, 2], [-1, 2, 3]
 
 
-# [ -1, 1, 2, 3, 4], 5
-
 def tripletWithSmallerSum(arr, target):
     arr.sort()
     result = []
