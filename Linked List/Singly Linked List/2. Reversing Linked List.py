@@ -69,9 +69,6 @@ class LinkedList:
         self.head = _recursive(self.head, None, None)
 
 
-
-
-
 lst = LinkedList()
 lst.insertAtHead(6)
 lst.insertAtHead(5)
@@ -88,26 +85,5 @@ lst.insertAtHead(1)
 lst.printlst()
 lst.reverse_rec()
 lst.printlst()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
