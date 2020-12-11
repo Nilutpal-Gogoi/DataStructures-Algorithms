@@ -86,7 +86,6 @@ class HashTable:
     # After each insertion, we will check if hash table needs resizing. The threshold will be a data member of the
     # HashTable class with a fixed value of 0.6.
 
-
     def insertion(self, key, value):
         b_index = self.get_index(key)
         if self.bucket[b_index] is None:
@@ -160,3 +159,17 @@ class HashTable:
         # If key does not exist
         print("Key not found")
         return
+
+
+table = HashTable()  # Create a HashTable
+print(table.is_empty())
+table.insertion("This", 1)
+table.insertion("is", 2)
+table.insertion("a", 3)
+table.insertion("Test", 4)
+table.insertion("Driver", 5)
+print("Table Size: " + str(table.get_size()))
+print("The value for 'is' key: " + str(table.search("is")))
+table.delete("is")
+table.delete("a")
+print("Table Size: " + str(table.get_size()))
