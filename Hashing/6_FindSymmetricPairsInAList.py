@@ -1,0 +1,2 @@
+# By definition (a,b) and (c,d) are symmetric pairs iff, a=d and b=c. In this problem, you have to implement the
+# find_symmetric(list) function which will find all the symmetric pairs in a given list.
