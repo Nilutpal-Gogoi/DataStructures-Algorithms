@@ -1,0 +1,22 @@
+Dictionary Vs Set
+> dict() -
+   > It is a mapping type object which maps hashable values to arbitrary objects.
+   > It stores an element in the form of key-value pairs.
+   > It provides the basic functionality of hashing along with some helper functions that help in the process of insertion
+deletion and search.
+   > Features -
+   1) An dict stores key-value pairs to map a key to the value
+   2) dict cannot contain duplicate keys. It can however have duplicate values.
+   3) dict does not store elements in any order either by the key or the value.
+   4) dict uses a hash table for its implementation. It takes the key and then maps it into the range of hash table
+using hash function.
+   5) On average, the complexity of the basic operation is O(1). It will go up to O(n) in the worst case.
+
+> set() -
+   > Set is a container in Python which has no duplicates. It consists of elements in no specific order.
+   > It is also built in the same way as dict, i.e., using the HashTable, but still quite different from the dict.
+   > Features -
+    1) set is a container that implements the Set interface, and this interface only stores values, not a key-value pair.
+The value of an element will be its keys at the same time.
+    2) set does not allow storing duplicate elements as a set can only contain unique elements.
+    3) on average, the complexity of the basic operation is O(1). It will go up to O(n) in the worst-case.

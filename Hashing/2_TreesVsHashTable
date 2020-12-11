@@ -1,0 +1,14 @@
+Comparision between Trees and Hast Tables
+> Both these data structures can be used for the same job, but their performance would bary based on the nature of our
+  program.
+  A) Basic Operation -
+    On average, hash tables can perform search, insertion and deletion in constant time whereas trees usually work in
+    O(logn). However, in the worst case, the performance of hash tables can come down to O(n) where n is the total
+    number of hash entries. An AVL tree would maintain O(log n) even in the worst case.
+  B) Hash Function -
+    An efficient hash table requires a smart hash function that would distribute the keys over all the space that is
+    available to us. A tree is simpler to implement in this regard as it accesses extra space only when needed and no
+    hash function is required to optimize its structure
+  C) Order of Data -
+    If our application needs data to be ordered in a specific sequence, trees would prove more useful because a BST or
+    an AVL tree maintain order. Hash Tables are the smarter choice if your data can be stored randomly.
