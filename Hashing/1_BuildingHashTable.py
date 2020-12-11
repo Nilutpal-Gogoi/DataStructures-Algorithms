@@ -82,3 +82,59 @@ class HashTable:
     # returns the index for our input key, we check if there is a hash entry already present at that index (if it does,
     # a collision has occurred). if not, we simply create a new hash entry for the key/value. However, if the index is
     # not None, we will traverse through the bucket to check if an object with our key exists.
+
+    def insertion(self, key, value):
+        b_index = self.get_index(key)
+        if self.bucket[b_index] is None:
+            self.bucket[b_index] = HashEntry(key, value)
+            print(key, "-", value, "inserted at index:", b_index)
+            self.size += 1
+        else:
+            head = self.bucket[b_index]
+            while head:
+                if head.key == key:
+                    head.value = value
+                    break
+                elif head.nxt is None:
+                    head.nxt = HashEntry(key, value)
+                    print(key, "-", value, "inserted at index:", b_index)
+                    self.size += 1
+                    break
+                head = head.nxt
+        load_factor = float(self.size) / float(self.slots)
+        if load_factor >= self.threshold:
+            self.resize()
+
+    # SEARCHING IN HAST TABLE
+    # Search takes O(1) amount of time. The search function takes in a key and sends it through the hash function to get
+    # the corresponding index in the table. If the hash entry with the desired key/value pair is found at that index,
+    # its value is returned.
+
+    def search(self, key):
+        # Find the node with the given key
+        b_index = self.get_index(key)
+        head = self.bucket[b_index]
+        # Search key in the slots
+        while head:
+            if head.key == key:
+                return head.value
+            head = head.nxt
+        # If key not found
+        return None
+
+    # DELETION IN TABLE
+    # Deletion can take up to O(n) time where n is the no of hash entries in the table.
+    # If they all get stored in the same bucket, we would have to traverse teh whole bucket to reach the entry we want
+    # to delete. The average case is still O(1)
+
+    # Remove a value based on a key
+    def delete(self, key):
+        # Find index
+        b_index = self.get_index(key)
+        head = self.bucket[b_index]
+        # If key exists at first slot
+        if head.key == key:
+            self.bucket[b_index] = head.nxt
+            print(key, "-", head.value, "deleted")
+            # Decrease the size by one
+            self.size -= 1
