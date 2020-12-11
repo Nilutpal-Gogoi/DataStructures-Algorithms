@@ -32,6 +32,7 @@ class HashTable:
         self.size = 0
         # List of HashEntry objects (by default all None)
         self.bucket = [None] * self.slots
+        self.threshold = 0.6
 
     # Helper functions
 
@@ -55,24 +56,23 @@ class HashTable:
     def resize(self):
         new_slots = self.slots * 2
         new_bucket = [None] * new_slots
-        # rehash all items into new slots
-        for i in range(0, len(self.bucket)):
+        # Rehashing all items into new slots
+        for i in range(len(self.bucket)):
             head = self.bucket[i]
-            while head is not None:
+            while head:
                 new_index = hash(head.key) % new_slots
                 if new_bucket[new_index] is None:
                     new_bucket[new_index] = HashEntry(head.key, head.value)
                 else:
                     node = new_bucket[new_index]
-                    while node is not None:
-                        if node.key is head.key:
-                            node.value = head.value
-                            node = None
-                        elif node.nxt is None:
-                            node.nxt = HashEntry(head.key, head.value)
-                            node = None
-                        else:
-                            node = node.nxt
+                    if node.key is head.key:
+                        node.value = head.value
+                        node = None
+                    elif node.nxt is None:
+                        node.nxt = HashEntry(head.key, head.value)
+                        node = None
+                    else:
+                        node = node.nxt
                 head = head.nxt
         self.bucket = new_bucket
         self.slots = new_slots
@@ -82,6 +82,12 @@ class HashTable:
     # returns the index for our input key, we check if there is a hash entry already present at that index (if it does,
     # a collision has occurred). if not, we simply create a new hash entry for the key/value. However, if the index is
     # not None, we will traverse through the bucket to check if an object with our key exists.
+<<<<<<< HEAD
+=======
+    # Avg Case : O(1), Worst Case: O(n)
+    # After each insertion, we will check if hash table needs resizing. The threshold will be a data member of the
+    # HashTable class with a fixed value of 0.6.
+>>>>>>> LinkedList
 
     def insertion(self, key, value):
         b_index = self.get_index(key)
@@ -138,3 +144,24 @@ class HashTable:
             print(key, "-", head.value, "deleted")
             # Decrease the size by one
             self.size -= 1
+<<<<<<< HEAD
+=======
+            return self
+        # Find the key in slots
+        prev = None
+        while head is not None:
+            # If key exists
+            if head.key == key:
+                prev.nxt = head.nxt
+                print(key, "-", head.value, "deleted")
+                # Decrease the size by one
+                self.size -= 1
+                return
+            # Else keep moving in chain
+            prev = head
+            head = head.nxt
+
+        # If key does not exist
+        print("Key not found")
+        return
+>>>>>>> LinkedList
