@@ -1,9 +1,10 @@
 # ---------------- Iterative Process ------------------------------------------
 
+
 def reverseString(string):
     reverse = ''
     length = len(string) - 1
-    while length>=0:
+    while length >= 0:
         reverse = reverse + string[length]
         length = length-1
 

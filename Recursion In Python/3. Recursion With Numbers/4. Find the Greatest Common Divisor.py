@@ -10,7 +10,7 @@ def GCD(test1, test2):
     if b == 0:
         return a
     else:
-        return GCD(b, a%b)
+        return GCD(b, a % b)
 
 
 print(GCD(6, 9))
